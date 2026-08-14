@@ -213,23 +213,69 @@ const questions=[
 
 let answers=new Array(50).fill(-1),currentQ=0,timerInterval=null,timeLeft=25*60,testSubmitted=false;
 const VALID_CODE="AJ876";
-const ALLOWED_EMAILS=new Set(["amanabcd99@gmail.com","kailikelly1@gmail.com","sayantiroy143@gmail.com","sainiisha234@gmail.com","pmmanasa24@gmail.com","abik7274@gmail.com","aparnabm12@gmail.com","cinderellatheresa@gmail.com","karansinghb388@gmail.com","kranthidommata.88@gmail.com","dusharbishnoi06@gmail.com","pwritika@gmail.com","amishadma@gmail.com","riyagupta1720@gmail.com","sivaranjaniarunachalam2000@gmail.com","anjanapp279@gmail.com","diyaghosh11@gmail.com","akanshanauti8@gmail.com","viidushii5@gmail.com","aartisaini28122003@gmail.com","nd450429@gmail.com","neharajpurohit262005@gmail.com","khushiagarwalla955@gmail.com","syaduvanshi765@gmail.com","asrithabhanu789@gmail.com","srijita72das@gmail.com","rbavithran23@gmail.com","srushtipandit.amu@gmail.com","nishaavijayan3@gmail.com","vpnidhi99@gmail.com","tamannaguptajm@gmail.com","chandanitpkr@gmail.com","gaura18819@gmail.com","swethavenkatesh19092002@gmail.com","riyatiwari0707@gmail.com","habibamahmood712@gmail.com","shifarukshana2007@gmail.com","mansi.thamma@gmail.com","raghavitummala@gmail.com","lavanya.a.more@gmail.com","misbahshaikh24160@gmail.com","bosesoumilee@gmail.com","kammarijagadeeshwar72@gmail.com","siprasahoo456@gmail.com","jangidmuskan04@gmail.com","anushkamisraa083@gmail.com","manisha011090@gmail.com","payalpalu233@gmail.com","bano7887@gmail.com","siniya.joy1704@gmail.com","amuthapriya719@gmail.com","shreeniselvam@gmail.com","tia2312s@gmail.com","dr.charli8@gmail.com","nandanayesudasan313@gmail.com","gayatri151289@gmail.com","pushpachinnikb@gmail.com","soganiswapni@gmail.com","saisahana96@gmail.com","j2438881@gmail.com","jagritis617@gmail.com","ishuaman426@gmail.com","jasminers805@gmail.com","shrutitripathi568@gmail.com","thasniazeeb2010@gmail.com","sonalrai1005@gmail.com","swagatikamohapatra2003@gmail.com","brijeshparmar33@gmail.com","mdfouzia311@gmail.com","nehaupadhyay1116@gmail.com","mithunak2006@gmail.com","abinayasri0706@gmail.com","rairashika955@gmail.com","gholapshubhangi454@gmail.com","psychiepsycho@gmail.com","ddsshamshad@gmail.com","farhatnas@gmail.com","collins.academia@gmail.com","ramanjot97799@gmail.com","khushisinhmaranmol@gmail.com","sumaiyafathima7890@gmail.com","nehagawale81@gmail.com","namyaashdhir@gmail.com","gopikagopal786@gmail.com","tips.monugautam@gmail.com","syedafathima425@gmail.com","kamu2104@gmail.com","karthikap628@gmail.com","simranzx90@gmail.com","harinisuresh14chitra@gmail.com","mahiitgy07@gmail.com","juvijuveria3@gmail.com","av2163893@gmail.com","renu.33833703@gmail.com","syedhiba199720@gmail.com","kmharshita562@gmail.com","sfeena1901@gmail.com","maitytrisha202@gmail.com","kumarc58710@gmail.com","lotus20105@gmail.com","anisbabitatirkey@gmail.com","babitakerketta588@gmail.com","abihat979@gmail.com","saininainasaini9@gmail.com","stanzin9chunit@gmail.com","mariyabirader@gmail.com","khursheedahmad939303@gmail.com","vikrantdhiman7209596@gmail.com","swainnamita264@gmail.com","hindahhhh@yahoo.com","madhushreedb11@gmail.com","anishkatiwari74@gmail.com","cricketersudhir48@gmail.com","manofatima6276@gmail.com","dhanvan3.7@gmail.com","shivanibhoria3@gmail.com","antimarathore2004@gmail.com","yadavtannu730@gmail.com","amishadma2004@gmail.com","rajasreerajasree848@gmail.com","yawankalshan93@gmail.com","shaxxjaa@gmail.com","monamidey2001@gmail.com","bkeikhosravy@gmail.com","shamlasabira13@gmail.com","titliintouch@gmail.com","poonambrar112233@gmail.com","anushkaraizada2000@gmail.com","darnasir5678@gmail.com","jyotibrar112233@gmail.com","farooqkhan14x@gmail.com","ashasipriya19@gmail.com","ramavaidya12@gmail.com","apexaverma02@gmail.com","2004armaan@gmail.com","sajjanverma73944@gmail.com","bhavana6249@gmail.com","soumileeesha@gmail.com","ridchopra14@gmail.com","parisahajare22@gmail.com","nayandhamecha13@gmail.com","prashantkandulna02@gmail.com","kakar.aadyaa@gmail.com","kavya.k0407@gmail.com","luckymishra2662005@gmail.com","cheenasinghal1234@gmail.com","chellapappa2004@gmail.com","anshulmakwanadu@gmail.com","jaykakkad2006@gmail.com","tejaanke9@gmail.com","chbrahma9s@gmail.com","kavithaau31@gmail.com","sonikaushal17@gmail.com","computerscienceu43@gmail.com","sidakgrover2k@gmail.com","pandeyturney@gmail.com","am0444an@gmail.com","akshyatheresa2002@gmail.com","laksanyamino26@gmail.com","meetmeshreya123@gmail.com","bhawnaantil15@gmail.com","sahaya2mani@gmail.com","jeslynpunnoose@gmail.com","jenifersofiyah@gmail.com","kumar.hiteshsahu@gmail.com","unnikrishnanujitha@gmail.com","bansaltushar874@gmail.com","ianbaplayer@gmail.com","nikitamahtaninikita@gmail.com","tupreeti27@gmail.com","sayyedjasmine919@gmail.com","sreeneha68@gmail.com","priyapriyuu2001@gmail.com","kavithamagipogu43@gmail.com","ayesha.t5599@gmail.com","pramatijain@gmail.com","saniyakulsum947@gmail.com","chinyamazhinga25@gmail.com","kumari200104suman@gmail.com","hunte3281@gmail.com","gaurav201620032@gmail.com","personalityopedia@gmail.com","guranshkaur663@gmail.com","alisha.mindscienceneuro@gmail.com","malikpreeti88@gmail.com","kanak2k4.roy@gmail.com","adeotipelumi000@gmail.com","unoshaprowess@gmail.com"]);
+function checkGate(){
+  const nameOk = nameInput.value.trim().length > 0;
 
-const nameInput=document.getElementById('studentName'),emailInput=document.getElementById('studentEmail'),codeInput=document.getElementById('testCode'),videoCheck=document.getElementById('videoConfirm'),btnStart=document.getElementById('btnStart'),codeHint=document.getElementById('codeHint');
-function checkGate(){const nameOk=nameInput.value.trim().length>0;const emailVal=emailInput.value.trim().toLowerCase();const emailFormatOk=emailVal.length>0&&emailVal.includes('@');const emailWhitelisted=ALLOWED_EMAILS.has(emailVal);const codeVal=codeInput.value.trim().toUpperCase();const codeOk=codeVal===VALID_CODE;const videoOk=videoCheck.checked;const emailHint=document.getElementById('emailHint');if(emailVal.length===0){emailInput.classList.remove('error','valid');emailHint.textContent='Use the email you registered with PsychLogic';emailHint.className='code-hint';}else if(emailFormatOk&&!emailWhitelisted){emailInput.classList.add('error');emailInput.classList.remove('valid');emailHint.textContent='This email is not registered — contact PsychLogic for access';emailHint.className='code-hint error';}else if(emailWhitelisted){emailInput.classList.remove('error');emailInput.classList.add('valid');emailHint.textContent='✓ Email verified';emailHint.className='code-hint valid';}else{emailInput.classList.remove('error','valid');emailHint.textContent='Use the email you registered with PsychLogic';emailHint.className='code-hint';}if(codeVal.length===0){codeInput.classList.remove('error','valid');codeHint.textContent='Enter the code from the Module 2 Part 3 video';codeHint.className='code-hint';}else if(codeVal.length===5&&!codeOk){codeInput.classList.add('error');codeInput.classList.remove('valid');codeHint.textContent='Incorrect code — rewatch the video';codeHint.className='code-hint error';}else if(codeOk){codeInput.classList.remove('error');codeInput.classList.add('valid');codeHint.textContent='✓ Code verified';codeHint.className='code-hint valid';}else{codeInput.classList.remove('error','valid');codeHint.textContent='Enter the code from the Module 2 Part 3 video';codeHint.className='code-hint';}btnStart.disabled=!(nameOk&&emailWhitelisted&&codeOk&&videoOk);}
-nameInput.addEventListener('input',checkGate);emailInput.addEventListener('input',checkGate);codeInput.addEventListener('input',checkGate);videoCheck.addEventListener('change',checkGate);
-btnStart.addEventListener('click',()=>{document.getElementById('gateScreen').style.display='none';document.getElementById('quizScreen').style.display='block';buildNavigator();renderQuestion(0);startTimer();});
-function startTimer(){timerInterval=setInterval(()=>{if(timeLeft<=0){clearInterval(timerInterval);submitTest();return;}timeLeft--;const m=Math.floor(timeLeft/60).toString().padStart(2,'0'),s=(timeLeft%60).toString().padStart(2,'0');document.getElementById('timerDisplay').textContent=`${m}:${s}`;const b=document.getElementById('timerBadge');b.classList.remove('warning','critical');if(timeLeft<=60)b.classList.add('critical');else if(timeLeft<=180)b.classList.add('warning');},1000);}
-function buildNavigator(){const nav=document.getElementById('qNavigator');nav.innerHTML='';for(let i=0;i<50;i++){const btn=document.createElement('button');btn.className='q-nav-btn'+(i===0?' active':'');btn.textContent=i+1;btn.onclick=()=>renderQuestion(i);nav.appendChild(btn);}}
-function updateNavigator(){const btns=document.querySelectorAll('.q-nav-btn');btns.forEach((btn,i)=>{btn.className='q-nav-btn';if(i===currentQ)btn.classList.add('active');if(answers[i]!==-1)btn.classList.add('answered');});btns[currentQ]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
-function renderQuestion(idx){currentQ=idx;const q=questions[idx],area=document.getElementById('questionArea');let tagHTML='';if(q.tag==='NET PYQ')tagHTML='<span class="q-tag net">NET/JRF PYQ</span>';else if(q.tag==='CUET PYQ')tagHTML='<span class="q-tag cuet">CUET PG PYQ</span>';const L=['A','B','C','D'];area.innerHTML=`<div class="question-card"><div class="question-header"><span class="q-number">Q${idx+1}</span>${tagHTML}<span class="q-marks">+2 / −0.50</span></div><div class="question-text">${q.q}</div><div class="options-list">${q.opts.map((o,i)=>`<button class="option-btn${answers[idx]===i?' selected':''}" onclick="selectOption(${idx},${i})"><span class="option-letter">${L[i]}</span><span class="option-text">${o}</span></button>`).join('')}</div><div class="q-nav-arrows"><button class="btn-nav" onclick="renderQuestion(${Math.max(0,idx-1)})" ${idx===0?'disabled':''}>← Prev</button><button class="btn-clear" onclick="clearAnswer(${idx})">Clear</button>${idx<49?`<button class="btn-nav primary" onclick="renderQuestion(${idx+1})">Next →</button>`:`<button class="btn-nav primary" onclick="confirmSubmit()">Submit</button>`}</div></div>`;updateNavigator();updateProgress();}
-function selectOption(qi,oi){answers[qi]=oi;renderQuestion(qi);}function clearAnswer(qi){answers[qi]=-1;renderQuestion(qi);}
-function updateProgress(){const a=answers.filter(x=>x!==-1).length;document.getElementById('progressPill').textContent=`${a} / 50`;document.getElementById('progressFill').style.width=`${(a/50)*100}%`;}
-function confirmSubmit(){const a=answers.filter(x=>x!==-1).length;document.getElementById('modalText').textContent=`You have answered ${a} out of 50 questions. Unanswered = 0 marks. Submit now?`;document.getElementById('confirmModal').classList.add('show');}
-function closeModal(){document.getElementById('confirmModal').classList.remove('show');}
-function submitTest(){if(testSubmitted)return;testSubmitted=true;clearInterval(timerInterval);closeModal();let c=0,w=0,s=0;questions.forEach((q,i)=>{if(answers[i]===-1)s++;else if(answers[i]===q.ans)c++;else w++;});const score=(c*2)-(w*0.5),pct=Math.max(0,score)/100;document.getElementById('quizScreen').style.display='none';document.getElementById('resultScreen').style.display='block';window.scrollTo(0,0);setTimeout(()=>{document.getElementById('scoreRingFill').style.strokeDashoffset=2*Math.PI*70*(1-pct);},100);document.getElementById('scoreNumber').textContent=score.toFixed(1);document.getElementById('statCorrect').textContent=c;document.getElementById('statWrong').textContent=w;document.getElementById('statSkipped').textContent=s;buildExplanations();}
-function buildExplanations(){const con=document.getElementById('explanationsContainer'),L=['A','B','C','D'];let h='';questions.forEach((q,i)=>{let st,sl;if(answers[i]===-1){st='skipped';sl='Skipped';}else if(answers[i]===q.ans){st='correct';sl='Correct';}else{st='wrong';sl='Incorrect';}let tg='';if(q.tag==='NET PYQ')tg='<span class="q-tag net">NET/JRF PYQ</span>';else if(q.tag==='CUET PYQ')tg='<span class="q-tag cuet">CUET PG PYQ</span>';h+=`<div class="explanation-card ${st}" data-status="${st}"><div class="exp-header"><span class="q-number">Q${i+1}</span><span class="exp-status ${st}">${sl}</span>${tg}</div><div class="exp-question">${q.q}</div><div class="exp-options">${q.opts.map((o,j)=>{let cl='';if(j===q.ans)cl='is-correct';else if(j===answers[i]&&answers[i]!==q.ans)cl='is-wrong';return`<div class="exp-opt ${cl}">${L[j]}. ${o}</div>`;}).join('')}</div><div class="exp-detail">${q.exp}</div></div>`;});con.innerHTML=h;}
-function filterResults(type,btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.explanation-card').forEach(c=>{c.style.display=(type==='all'||c.dataset.status===type)?'block':'none';});}
+  const emailVal = emailInput.value.trim().toLowerCase();
+  const emailFormatOk = emailVal.length > 0 && emailVal.includes('@');
+
+  const codeVal = codeInput.value.trim().toUpperCase();
+  const codeOk = codeVal === VALID_CODE;
+
+  const videoOk = videoCheck.checked;
+
+  const emailHint = document.getElementById('emailHint');
+
+  // Email is no longer restricted to ALLOWED_EMAILS
+  if(emailVal.length === 0){
+    emailInput.classList.remove('error','valid');
+    emailHint.textContent = 'Enter your email address';
+    emailHint.className = 'code-hint';
+  }
+  else if(!emailFormatOk){
+    emailInput.classList.add('error');
+    emailInput.classList.remove('valid');
+    emailHint.textContent = 'Please enter a valid email address';
+    emailHint.className = 'code-hint error';
+  }
+  else{
+    emailInput.classList.remove('error');
+    emailInput.classList.add('valid');
+    emailHint.textContent = '✓ Email accepted';
+    emailHint.className = 'code-hint valid';
+  }
+
+  // Code verification remains unchanged
+  if(codeVal.length === 0){
+    codeInput.classList.remove('error','valid');
+    codeHint.textContent = 'Enter the code from the Module 2 Part 3 video';
+    codeHint.className = 'code-hint';
+  }
+  else if(codeVal.length === 5 && !codeOk){
+    codeInput.classList.add('error');
+    codeInput.classList.remove('valid');
+    codeHint.textContent = 'Incorrect code — rewatch the video';
+    codeHint.className = 'code-hint error';
+  }
+  else if(codeOk){
+    codeInput.classList.remove('error');
+    codeInput.classList.add('valid');
+    codeHint.textContent = '✓ Code verified';
+    codeHint.className = 'code-hint valid';
+  }
+  else{
+    codeInput.classList.remove('error','valid');
+    codeHint.textContent = 'Enter the code from the Module 2 Part 3 video';
+    codeHint.className = 'code-hint';
+  }
+
+  // Anyone can start as long as they provide:
+  // 1. Name
+  // 2. Valid email
+  // 3. Correct code
+  // 4. Confirm video
+  btnStart.disabled = !(nameOk && emailFormatOk && codeOk && videoOk);
+}
 </script>
 </body>
 </html>
